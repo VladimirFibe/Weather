@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0285FEAB2B09A5F5002F9B44 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0285FEAA2B09A5F5002F9B44 /* TabBar.swift */; };
 		02ABFFA72B08F95A0073F47C /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABFFA62B08F95A0073F47C /* WeatherApp.swift */; };
 		02ABFFA92B08F95A0073F47C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABFFA82B08F95A0073F47C /* ContentView.swift */; };
 		02ABFFAB2B08F95C0073F47C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02ABFFAA2B08F95C0073F47C /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0285FEAA2B09A5F5002F9B44 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		02ABFFA32B08F95A0073F47C /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02ABFFA62B08F95A0073F47C /* WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
 		02ABFFA82B08F95A0073F47C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				02ABFFA62B08F95A0073F47C /* WeatherApp.swift */,
 				02ABFFA82B08F95A0073F47C /* ContentView.swift */,
 				02ABFFB82B090E050073F47C /* HomeView.swift */,
+				0285FEAA2B09A5F5002F9B44 /* TabBar.swift */,
 				02ABFFBA2B090EC90073F47C /* Color+Extension.swift */,
 				02ABFFAA2B08F95C0073F47C /* Assets.xcassets */,
 				02ABFFAC2B08F95C0073F47C /* Preview Content */,
@@ -161,6 +164,7 @@
 				02ABFFA92B08F95A0073F47C /* ContentView.swift in Sources */,
 				02ABFFA72B08F95A0073F47C /* WeatherApp.swift in Sources */,
 				02ABFFBB2B090EC90073F47C /* Color+Extension.swift in Sources */,
+				0285FEAB2B09A5F5002F9B44 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
