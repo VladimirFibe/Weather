@@ -4,6 +4,7 @@ struct TabBar: View {
     var action: () -> Void
     var body: some View {
         ZStack {
+            Arc().frame(height: 88)
             HStack {
                 Button(action: action) {
                     TabBarItem(title: "mappin.and.ellipse")
