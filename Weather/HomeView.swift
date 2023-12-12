@@ -1,6 +1,13 @@
 import SwiftUI
+import BottomSheet
+
+enum BottomSheetPosition: CGFloat, CaseIterable {
+    case top = 0.83 // 702/844
+    case middle = 0.385 // 325/844
+}
 
 struct HomeView: View {
+    @State var bottomSheetPosition: BottomSheetPosition = .middle
     private var attributedString: AttributedString {
         var string = AttributedString("19°" + "\n" + "Mostly Clear")
         if let value = string.range(of: "19°") {
@@ -40,6 +47,10 @@ struct HomeView: View {
 
                 TabBar() {}
             }
+        }
+        .sheetPlus(isPresented: .constant(false)) {
+            Text("sgflsskflgks fgk s;")
+                .background(Color.yellow)
         }
     }
 }
