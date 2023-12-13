@@ -7,6 +7,7 @@ enum BottomSheetPosition: CGFloat, CaseIterable {
 }
 
 struct HomeView: View {
+    @State var isPresented = false
     @State var bottomSheetPosition: BottomSheetPosition = .middle
     private var attributedString: AttributedString {
         var string = AttributedString("19°" + "\n" + "Mostly Clear")
@@ -22,6 +23,7 @@ struct HomeView: View {
         return string
     }
     var body: some View {
+
         NavigationStack {
             ZStack {
                 Color.background.ignoresSafeArea()
@@ -44,13 +46,11 @@ struct HomeView: View {
                     Spacer()
                 }
                 .padding(51)
-
+                
+                ForecastView()
+                    .offset(y: 500)
                 TabBar() {}
             }
-        }
-        .sheetPlus(isPresented: .constant(false)) {
-            Text("sgflsskflgks fgk s;")
-                .background(Color.yellow)
         }
     }
 }
