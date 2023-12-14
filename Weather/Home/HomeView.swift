@@ -1,27 +1,11 @@
 import SwiftUI
-import BottomSheet
 
-enum BottomSheetPosition: CGFloat, CaseIterable {
-    case top = 0.83 // 702/844
-    case middle = 0.385 // 325/844
-}
+
 
 struct HomeView: View {
+    @StateObject var viewModel = HomeViewModel()
     @State var isPresented = false
-    @State var bottomSheetPosition: BottomSheetPosition = .middle
-    private var attributedString: AttributedString {
-        var string = AttributedString("19°" + "\n" + "Mostly Clear")
-        if let value = string.range(of: "19°") {
-            string[value].font = .system(size: 96, weight: .thin)
-            string[value].foregroundColor = .primary
-        }
-
-        if let weather = string.range(of: "Mostly Clear") {
-            string[weather].font = .title3.weight(.semibold)
-            string[weather].foregroundColor = .secondary
-        }
-        return string
-    }
+    @State var y: CGFloat = 0
     var body: some View {
 
         NavigationStack {
@@ -39,7 +23,7 @@ struct HomeView: View {
                     Text("Montreal")
                         .font(.largeTitle)
                     VStack {
-                        Text(attributedString)
+                        Text(viewModel.attributedString)
                         Text("H:24°   L:18°")
                             .font(.title3.weight(.semibold))
                     }
@@ -48,7 +32,16 @@ struct HomeView: View {
                 .padding(51)
                 
                 ForecastView()
-                    .offset(y: 500)
+                    .offset(y: 500 + y)
+                    .gesture(
+                        DragGesture()
+                            .onChanged { value in
+                                y = value.translation.height
+                            }
+                            .onEnded { _ in
+                                y = 0
+                            }
+                    )
                 TabBar() {}
             }
         }
